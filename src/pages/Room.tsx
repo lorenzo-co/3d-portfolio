@@ -9,6 +9,8 @@ import FPV from "../components/FPV";
 import { Table } from "../components/Table";
 import Interface from "../components/Interface";
 
+// TODO:
+// - add red button with timer in the air
 
 const Room = () => {
 	const [showRoom, setShowRoom] = useState<boolean>(false);
