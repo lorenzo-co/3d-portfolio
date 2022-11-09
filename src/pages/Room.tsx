@@ -8,12 +8,18 @@ import Player from "../components/Player";
 import FPV from "../components/FPV";
 import { Table } from "../components/Table";
 import Interface from "../components/Interface";
+import { createOffer } from "../connection/peerConnection";
 
 // TODO:
 // - add red button with timer in the air
+// - add text with anime js to Ready, Set, Go!
 
 const Room = () => {
 	const [showRoom, setShowRoom] = useState<boolean>(false);
+
+	useEffect(() => {
+		createOffer().then(_ => console.log("Offer created!"));
+	}, []);
 
 	useEffect(() => {
 		if(!showRoom){
